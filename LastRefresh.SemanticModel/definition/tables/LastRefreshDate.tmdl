@@ -1,0 +1,24 @@
+table LastRefreshDate
+	lineageTag: f7182c69-44bf-4b6e-bf1c-89d8284af014
+
+	column Column1
+		dataType: string
+		lineageTag: 0cbb4ba6-6afb-44f0-9a6e-cdccdae900e6
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition LastRefreshDate = m
+		mode: import
+		source =
+				let
+				    Source = DateTime.LocalNow(),
+				    #"Converted to Table" = #table(1, {{Source}})
+				in
+				    #"Converted to Table"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,71 @@
+table Geography
+	lineageTag: de341a02-93bb-4b4f-a9f1-43e3fccde2e4
+
+	column GeographyID
+		dataType: int64
+		formatString: 0
+		lineageTag: d075944c-0df6-4914-a8ad-1546ec7d4229
+		summarizeBy: none
+		sourceColumn: GeographyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZipCodeBKey
+		dataType: string
+		lineageTag: 1e55ee83-b85a-46af-8e9c-a6869a6b9146
+		summarizeBy: none
+		sourceColumn: ZipCodeBKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column County
+		dataType: string
+		lineageTag: 3b3e0581-69f2-4977-ad89-bc82fe56f46d
+		summarizeBy: none
+		sourceColumn: County
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 89ca5847-4845-48f7-bd9b-5139ce0d25c2
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 9382c75b-19bb-462e-85cc-78d8cd809e9e
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 8a32f0bc-fcd5-4785-b97b-9697c4aef1e8
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZipCode
+		dataType: string
+		lineageTag: 311eea59-5198-49cf-9de0-dad1c73b7bd4
+		summarizeBy: none
+		sourceColumn: ZipCode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Geography = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("qqeryyplr5te5cuma42lcvyvam-qv2qq5ovtj7utiht4yimjxvqxm.datawarehouse.fabric.microsoft.com", "Permission warehouse"),
+				    dbo_Geography = Source{[Schema="dbo",Item="Geography"]}[Data]
+				in
+				    dbo_Geography
+
+	annotation PBI_ResultType = Table
+
