@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "permission SQL database report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a8b60f86-2c31-bf9c-4938-9a5f03c9aa7b"
+  }
+}

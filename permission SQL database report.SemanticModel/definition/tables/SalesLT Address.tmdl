@@ -1,0 +1,93 @@
+table 'SalesLT Address'
+	lineageTag: 4336703b-e408-4524-88ec-903bec6c0e2d
+
+	column AddressID
+		dataType: int64
+		formatString: 0
+		lineageTag: 67966325-f980-45e9-95dc-4b16c842dc14
+		summarizeBy: none
+		sourceColumn: AddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine1
+		dataType: string
+		lineageTag: 5f0a4039-7eef-4025-952a-bdfdf88ca357
+		summarizeBy: none
+		sourceColumn: AddressLine1
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine2
+		dataType: string
+		lineageTag: 6f498cca-c6bb-494d-b6c2-0296d2aeaff2
+		summarizeBy: none
+		sourceColumn: AddressLine2
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 186fcd19-1e55-4202-92a5-093a4b13f843
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvince
+		dataType: string
+		lineageTag: 37070f0e-f4e2-41cb-8e39-77a61d2754d9
+		summarizeBy: none
+		sourceColumn: StateProvince
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryRegion
+		dataType: string
+		lineageTag: 1a1d2f8e-7c5b-41d1-b474-d00e9aa855d4
+		summarizeBy: none
+		sourceColumn: CountryRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostalCode
+		dataType: string
+		lineageTag: 02973e88-c5c0-49aa-8bc8-750c27830f73
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: 6a351197-c30c-48ba-a6be-0efea2df7df2
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b3e1d7be-9429-4be3-9058-98f8bbf1aebc
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 8ca5c278-25c9-4e68-ad47-db05179409f3
+			defaultHierarchy: LocalDateTable_1dbf217e-30c8-41f9-8870-a95f02211032.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'SalesLT Address' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("qqeryyplr5te5cuma42lcvyvam-qv2qq5ovtj7utiht4yimjxvqxm.database.fabric.microsoft.com", "Permission_SQL_database-3c01bc57-987f-4f51-bd50-c739d09fd688"),
+				    SalesLT_Address = Source{[Schema="SalesLT",Item="Address"]}[Data]
+				in
+				    SalesLT_Address
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,92 @@
+table Time
+	lineageTag: 61b66337-45cf-42a7-8324-bb06482defa6
+
+	column TimeID
+		dataType: int64
+		formatString: 0
+		lineageTag: ac4e3680-a7a7-4a1a-ac32-15e037c642c6
+		summarizeBy: count
+		sourceColumn: TimeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeBKey
+		dataType: string
+		lineageTag: 3a114a57-a6e3-4d4a-abbd-2e023b930278
+		summarizeBy: none
+		sourceColumn: TimeBKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column HourNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: e6395eef-d9a7-4888-803b-652ef4f6c8ce
+		summarizeBy: sum
+		sourceColumn: HourNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MinuteNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 711a5a94-e3e8-4399-ae1e-2d1500fa62fc
+		summarizeBy: sum
+		sourceColumn: MinuteNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SecondNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f80553f-9388-47da-89b6-e9666e524e59
+		summarizeBy: sum
+		sourceColumn: SecondNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeInSecond
+		dataType: int64
+		formatString: 0
+		lineageTag: ac5f90b5-8325-45b1-9599-a5dd071ace3b
+		summarizeBy: sum
+		sourceColumn: TimeInSecond
+
+		annotation SummarizationSetBy = Automatic
+
+	column HourlyBucket
+		dataType: string
+		lineageTag: 51f02063-444d-402c-a742-6d9f2e218fab
+		summarizeBy: none
+		sourceColumn: HourlyBucket
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayTimeBucketGroupKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b2eac133-d202-436d-9c24-829f1f5a2344
+		summarizeBy: count
+		sourceColumn: DayTimeBucketGroupKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayTimeBucket
+		dataType: string
+		lineageTag: 76d2d9a8-c7fa-46cb-a5e5-76734d648825
+		summarizeBy: none
+		sourceColumn: DayTimeBucket
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Time = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("qqeryyplr5te5cuma42lcvyvam-qv2qq5ovtj7utiht4yimjxvqxm.datawarehouse.fabric.microsoft.com", "Permission warehouse"),
+				    dbo_Time = Source{[Schema="dbo",Item="Time"]}[Data]
+				in
+				    dbo_Time
+
+	annotation PBI_ResultType = Table
+

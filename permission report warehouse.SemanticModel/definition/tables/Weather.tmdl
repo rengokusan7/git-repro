@@ -1,0 +1,52 @@
+table Weather
+	lineageTag: 9e78d855-b648-4ff0-b317-71b8941ecd01
+
+	column DateID
+		dataType: int64
+		formatString: 0
+		lineageTag: a48c14f7-f49f-4a4f-80e1-0b3598238e6c
+		summarizeBy: none
+		sourceColumn: DateID
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyID
+		dataType: int64
+		formatString: 0
+		lineageTag: db0a0edd-74ff-4cbf-9dae-fd5f2e119160
+		summarizeBy: none
+		sourceColumn: GeographyID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrecipitationInches
+		dataType: double
+		lineageTag: a78044ec-6b3b-49eb-8945-f78df4dbe24b
+		summarizeBy: sum
+		sourceColumn: PrecipitationInches
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AvgTemperatureFahrenheit
+		dataType: double
+		lineageTag: 2b35f4b9-a132-40c3-adf5-1baf51846cd8
+		summarizeBy: sum
+		sourceColumn: AvgTemperatureFahrenheit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Weather = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("qqeryyplr5te5cuma42lcvyvam-qv2qq5ovtj7utiht4yimjxvqxm.datawarehouse.fabric.microsoft.com", "Permission warehouse"),
+				    dbo_Weather = Source{[Schema="dbo",Item="Weather"]}[Data]
+				in
+				    dbo_Weather
+
+	annotation PBI_ResultType = Table
+

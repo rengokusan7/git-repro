@@ -1,0 +1,21 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "Dataflow 2",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "gatewayObjectId": "7e3b9785-fbf3-4701-ab92-b81046d6f2cf",
+  "queriesMetadata": {
+    "Customer Lookup": {
+      "queryId": "03a0a1ee-1119-4b66-ba33-e5fefa9cfde0",
+      "queryName": "Customer Lookup"
+    }
+  },
+  "connections": [
+    {
+      "path": "C:\\New folder\\Customer Lookup.csv",
+      "kind": "File",
+      "connectionId": "{\"ClusterId\":\"7e3b9785-fbf3-4701-ab92-b81046d6f2cf\",\"DatasourceId\":\"628dd4e1-e5e8-4918-8c6b-7e9acfb4658e\"}"
+    }
+  ]
+}

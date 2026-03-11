@@ -1,0 +1,39 @@
+table HackneyLicense
+	lineageTag: 37b7d551-4bd5-42d9-91ed-27cf422917e2
+
+	column HackneyLicenseID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a1910d5-a534-40d2-b040-6289d770ce98
+		summarizeBy: none
+		sourceColumn: HackneyLicenseID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HackneyLicenseBKey
+		dataType: string
+		lineageTag: 4d99737a-9bc3-4d15-9a46-9f29b6fefce2
+		summarizeBy: none
+		sourceColumn: HackneyLicenseBKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column HackneyLicenseCode
+		dataType: string
+		lineageTag: d56079cb-d593-49ab-97ab-2b07e42a1551
+		summarizeBy: none
+		sourceColumn: HackneyLicenseCode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition HackneyLicense = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("qqeryyplr5te5cuma42lcvyvam-qv2qq5ovtj7utiht4yimjxvqxm.datawarehouse.fabric.microsoft.com", "Permission warehouse"),
+				    dbo_HackneyLicense = Source{[Schema="dbo",Item="HackneyLicense"]}[Data]
+				in
+				    dbo_HackneyLicense
+
+	annotation PBI_ResultType = Table
+

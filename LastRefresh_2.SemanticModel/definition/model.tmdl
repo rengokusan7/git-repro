@@ -1,0 +1,21 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Sheet1","LastRefreshDate"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.139.1678.0 (24.12)+2a034ab280bddf891eb7bb9ebfe6996f9c3a3196
+
+ref table Sheet1
+ref table DateTableTemplate_5e60e265-3690-47d3-8735-e4dd784b0224
+ref table LocalDateTable_63d875bb-ac3c-4824-9ccd-85365d928270
+ref table LastRefreshDate
+
+ref cultureInfo en-US
+

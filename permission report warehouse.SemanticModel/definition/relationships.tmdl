@@ -1,0 +1,55 @@
+relationship 7861ae0e-1704-4660-b39d-fedefba528d6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.Date
+	toColumn: LocalDateTable_fffdd4b4-6190-46a8-99dd-ef07dc68c129.Date
+
+relationship 97a55386-610f-48d2-8f9e-118e084a459e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.FirstDayOfMonth
+	toColumn: LocalDateTable_727c0764-5621-469c-8855-b73f01d04e9d.Date
+
+relationship b93fcd12-47d7-452c-8964-ab019cad92f0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.LastDayOfMonth
+	toColumn: LocalDateTable_45bd60b0-53ab-45c1-b5d0-fec8a1faf2af.Date
+
+relationship 6cd07b8b-b77b-46f9-bf63-899eb9ee888f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.FirstDayOfQuarter
+	toColumn: LocalDateTable_d84f2fb8-382f-4fdc-85ec-a1b17128e1f1.Date
+
+relationship 103969db-80ec-4ec8-abf8-bb23386cc48c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.LastDayOfQuarter
+	toColumn: LocalDateTable_16934b60-0236-450f-98e3-68a7e049a21e.Date
+
+relationship 83664fbb-a4da-4fcf-832c-83fb33e6ed6f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.FirstDayOfYear
+	toColumn: LocalDateTable_f5e5ebab-e1ee-4ed2-b45c-d1d46f2622e1.Date
+
+relationship 21100dca-9fef-4938-bb59-885832a73cdc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.LastDayOfYear
+	toColumn: LocalDateTable_fd472ef7-577c-4df1-8fc9-a2f3169bcfd7.Date
+
+relationship AutoDetected_ccc29db9-bf88-4341-b55e-ab1f6366dc2a
+	fromColumn: Trip.DateID
+	toColumn: Date.DateID
+
+relationship AutoDetected_e1600037-4302-45db-8863-1b303a152379
+	fromColumn: Weather.DateID
+	toColumn: Date.DateID
+
+relationship AutoDetected_4f93b59a-243d-4c72-b1b1-3f10afefd917
+	fromColumn: Weather.GeographyID
+	toColumn: Geography.GeographyID
+
+relationship AutoDetected_e68dbac8-5b22-4132-a4ea-ac50cbb1947d
+	fromColumn: Trip.MedallionID
+	toColumn: Medallion.MedallionID
+
+relationship AutoDetected_dc445a4b-5c3e-4df1-bfb7-150e69de746a
+	fromColumn: Trip.HackneyLicenseID
+	toColumn: HackneyLicense.HackneyLicenseID
+

@@ -1,0 +1,15 @@
+model 355b7bf2-30d2-4a59-809e-7d387addc5da
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["vw_PaymentAnalysis","Medallion","Weather","Date","Geography","HackneyLicense","Trip","Time"]
+
+annotation SourceLineageTagType = DatabaseFullyQualifiedName
+
