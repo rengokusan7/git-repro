@@ -1,0 +1,22 @@
+expression 'DirectQuery to AS - LastRefresh_2' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/Embed%20troubleshoot%202", "LastRefresh_2"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 63bf0fa0-92d2-403f-87c1-f98af29af350
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+expression 'DirectQuery to AS - LastRefresh_2 2' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/embed%20troubleshoot", "LastRefresh_2"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: b82e1cd6-9877-456d-b375-8bb76d2da248
+
+	annotation PBI_IncludeFutureArtifacts = True
+
