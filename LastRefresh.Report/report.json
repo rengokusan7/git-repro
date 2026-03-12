@@ -1,0 +1,50 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.62\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "556e50b6631af2b6eeaf",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"527a22eddf3e8fca5345\",\"layouts\":[{\"id\":0,\"position\":{\"x\":150,\"y\":420,\"width\":300,\"height\":300,\"z\":1,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"qnaVisual\",\"drillFilterOtherVisuals\":true,\"objects\":{\"hiddenProperties\":[{\"properties\":{\"savedUtterance\":{\"expr\":{\"Literal\":{\"Value\":\"'number of sheet 1 products'\"}}}}}]}}}",
+          "height": 300.00,
+          "width": 300.00,
+          "x": 150.00,
+          "y": 420.00,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"a3e2637650cb3b81ba33\",\"layouts\":[{\"id\":0,\"position\":{\"x\":177.63916122632588,\"y\":66.14224088214262,\"z\":0,\"width\":585.8312763846917,\"height\":279.68719001591734,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(LastRefreshDate.Column1)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LastRefreshDate\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Column1\"}},\"Function\":3},\"Name\":\"Min(LastRefreshDate.Column1)\",\"NativeReferenceName\":\"First Column1\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 279.69,
+          "width": 585.83,
+          "x": 177.64,
+          "y": 66.14,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

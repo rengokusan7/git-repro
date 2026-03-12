@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "PaginatedReport",
+    "displayName": "vm_rdl_download"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "006e5e98-4cca-91e5-4cea-0d34702264c3"
+  }
+}

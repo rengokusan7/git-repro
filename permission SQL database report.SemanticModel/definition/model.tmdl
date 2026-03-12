@@ -1,0 +1,44 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["SalesLT Address","SalesLT Customer","SalesLT CustomerAddress","SalesLT Product","SalesLT ProductCategory","SalesLT ProductModel","SalesLT ProductDescription","SalesLT ProductModelProductDescription","SalesLT SalesOrderDetail","SalesLT SalesOrderHeader"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.145.1105.0 (25.07)+decbc46fce458c5b8d5109d6f32a743f2ac949c8
+
+ref table 'SalesLT Address'
+ref table DateTableTemplate_5ec7e11f-1be1-4a45-a3b1-69f1bd757f44
+ref table LocalDateTable_1dbf217e-30c8-41f9-8870-a95f02211032
+ref table 'SalesLT Customer'
+ref table LocalDateTable_bbd3c1e9-6737-49d5-97c0-28e8b9ccb43e
+ref table 'SalesLT CustomerAddress'
+ref table LocalDateTable_7b607413-dc79-4ebc-be00-f0ba068d193f
+ref table 'SalesLT Product'
+ref table LocalDateTable_6ab82498-06e9-435f-8f77-80fb038fdb0c
+ref table LocalDateTable_101f42ce-5db7-42cf-8dda-acd353eaec58
+ref table LocalDateTable_9d6ac863-6885-4974-b870-a0baa1434850
+ref table LocalDateTable_11ea2e37-2e28-4f2a-af0a-2575d5ccb771
+ref table 'SalesLT ProductCategory'
+ref table LocalDateTable_f5c79042-cea3-4e5f-89e1-a890657e2895
+ref table 'SalesLT ProductModel'
+ref table LocalDateTable_7081822c-54ac-4665-b4f5-0be92db44194
+ref table 'SalesLT ProductDescription'
+ref table LocalDateTable_71ee8251-91ae-470b-8ddc-aff9aadfa09e
+ref table 'SalesLT ProductModelProductDescription'
+ref table LocalDateTable_7235541f-1e5d-4916-9c59-d77db2984471
+ref table 'SalesLT SalesOrderDetail'
+ref table LocalDateTable_c4e1107e-65f7-4ea5-8f6c-f16724827af4
+ref table 'SalesLT SalesOrderHeader'
+ref table LocalDateTable_b5e6c01d-2800-4d2a-a656-6f438d6517a0
+ref table LocalDateTable_4c4b42ad-bffb-467d-89e5-0ef09ed849a7
+ref table LocalDateTable_733b76c5-fdbd-404b-8fac-cfde6a82d84a
+ref table LocalDateTable_f6269f45-28da-4dff-88b1-738e21aace73
+
+ref cultureInfo en-US
+
